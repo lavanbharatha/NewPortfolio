@@ -1,0 +1,39 @@
+.footer {
+  background: var(--bg-secondary);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+
+  .copyright {
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+
+    .social-link {
+      color: var(--text-secondary);
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: var(--primary-color);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+
+    .social-links {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+} 

@@ -1,0 +1,128 @@
+.skills-section {
+  padding: 6rem 0;
+  background-color: #0f1116;
+  width: 100vw;
+
+
+  .section-title {
+    color: var(--text-color);
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 3rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+    }
+  }
+
+  .skill-category {
+    background: var(--bg-secondary);
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .category-title {
+      color: var(--text-color);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .skills-list {
+      .skill-item {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .skill-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.5rem;
+
+          .skill-name {
+            color: var(--text-color);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            i {
+              color: var(--primary-color);
+              font-size: 1.2rem;
+            }
+          }
+
+          .skill-percentage {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+          }
+        }
+
+        .progress {
+          height: 8px;
+          background-color: var(--border-color);
+          border-radius: 4px;
+          overflow: hidden;
+
+          .progress-bar {
+            background-color: var(--primary-color);
+            transition: width 1s ease-in-out;
+            position: relative;
+            border-radius: 4px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              animation: shimmer 2s infinite;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 4rem 0;
+  }
+} 

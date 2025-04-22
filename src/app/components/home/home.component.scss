@@ -1,0 +1,40 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #0f1116;
+  position: relative;
+  overflow: hidden;
+}
+.btn-routing{
+  border-radius: 20px;
+}
+.btn{
+  border-radius: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+.btn:hover{
+transform: translate(5px, -5px);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+
+.hero-text {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
