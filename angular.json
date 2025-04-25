@@ -61,7 +61,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "aot": true,
-              "buildOptimizer": true,
               "extractLicenses": true
             },
             "development": {
