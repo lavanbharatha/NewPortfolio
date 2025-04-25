@@ -1,9 +1,10 @@
 {
-    "rewrites": [
+    "builds": [
       {
-        "source": "/:match*",
-        "destination": "/index.html"
+        "src": "dist/frontend/**",
+        "use": "@vercel/static"
       }
-    ]
+    ],
+    "cleanUrls": true
   }
   
