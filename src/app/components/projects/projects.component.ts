@@ -45,7 +45,7 @@ export class ProjectsComponent {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing my projects, skills, and experience. Built with Angular and Bootstrap for a responsive design.',
       techStack: ['Angular', 'Bootstrap', 'HTML', 'CSS'],
-      image: 'MyPortfolio.png',
+      image: 'public/MyPortfolio.png',
       githubLink:'https://github.com/lavanbharatha/NewPortfolio'
     }
   ];

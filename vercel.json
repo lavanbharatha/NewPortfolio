@@ -1,25 +1,10 @@
 {
-    "version": 2,
-    "builds": [
+    "rewrites": [
       {
-        "src": "package.json",
-        "use": "@vercel/angular",
-        "config": {
-          "buildCommand": "ng build --configuration production",
-          "outputDirectory": "dist/frontend"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/[^.]+",
-        "dest": "/index.html",
-        "status": 200
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/$1"
+        "source": "/(.*)",
+        "destination": "/index.html"
       }
     ],
     "cleanUrls": true
   }
+  
