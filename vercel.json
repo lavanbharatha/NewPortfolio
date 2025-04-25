@@ -1,10 +1,25 @@
 {
+    "version": 2,
     "builds": [
       {
-        "src": "dist/frontend/**",
-        "use": "@vercel/static"
+        "src": "package.json",
+        "use": "@vercel/angular",
+        "config": {
+          "buildCommand": "ng build --configuration production",
+          "outputDirectory": "dist/frontend"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/[^.]+",
+        "dest": "/index.html",
+        "status": 200
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/$1"
       }
     ],
     "cleanUrls": true
   }
-  
