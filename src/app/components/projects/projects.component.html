@@ -8,11 +8,11 @@
             <img [src]="project.image" [alt]="project.title" />
           </div>
 
-          <!-- Moved project-overlay outside of .project-image -->
           <div class="project-overlay">
             <div class="project-links">
-              <a *ngIf="project.githubLink" [href]="project.githubLink" target="_blank" class="btn btn-primary btn-sm">View Code</a>
-          
+              <a *ngIf="project.githubLink" [href]="project.githubLink" target="_blank" class="btn btn-primary btn-sm">
+                View Code
+              </a>
             </div>
           </div>
 

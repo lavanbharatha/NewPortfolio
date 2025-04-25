@@ -170,40 +170,31 @@
 
 @media screen and (max-width: 768px) {
   .projects-section {
-    padding: 3rem 0;
-
     .timeline {
-      max-width: 100%;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
 
       &::before {
-        left: 30px;
+        left: 1rem;
       }
 
       .timeline-item {
-        width: 100%;
-        max-width: 500px;
-        min-width: 500px;
-        margin: 0 auto 3rem auto;
-        padding-left: 3rem;
-        left: 0 !important;
+        width: 500px !important;
+        min-width: 500px !important;
+        max-width: 500px !important;
+        margin: 0 auto 2rem auto;
+        padding-left: 2.5rem;
 
         &:nth-child(odd),
         &:nth-child(even) {
-          left: 0 !important;
-          padding-left: 3rem;
+          padding-left: 2.5rem;
         }
 
         &::before {
-          left: 30px;
-        }
-
-        .timeline-content {
-          text-align: left;
+          left: 1rem;
         }
       }
     }
-  }
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -216,9 +207,9 @@
       }
 
       .timeline-item {
-        width: 100%;
-        max-width: 500px;
-        min-width: 500px;
+        width: 500px !important;
+        min-width: 500px !important;
+        max-width: 500px !important;
         margin: 0 auto 2rem auto;
         padding-left: 2.5rem;
 

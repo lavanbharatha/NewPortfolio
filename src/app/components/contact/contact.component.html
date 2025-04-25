@@ -1,12 +1,11 @@
 <section class="contact-section">
   <div class="container">
-    <h2 class="section-title text-center mb-5">Contact Me</h2>
+    <h2 class="section-title">Contact Me</h2>
 
-    <div class="row">
-      <!-- Contact Information -->
-      <div class="col-lg-3 mb-4 mb-lg-0 offset-lg-2">
+    <div class="row justify-content-center gx-5 gy-4 flex-wrap">
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-6">
         <div class="contact-info">
-
           <div class="contact-item mb-4">
             <i class="bi bi-envelope-fill"></i>
             <div class="contact-details">
@@ -19,7 +18,7 @@
             <i class="bi bi-whatsapp"></i>
             <div class="contact-details">
               <h4>WhatsApp</h4>
-              <a href="9652131270" target="_blank">+91-9652131270</a>
+              <a href="tel:+919652131270">+91-9652131270</a>
             </div>
           </div>
 
@@ -27,8 +26,9 @@
             <i class="bi bi-linkedin"></i>
             <div class="contact-details">
               <h4>LinkedIn</h4>
-              <a href="https://linkedin.com/in/lavan-bharatha-879871235"
-                target="_blank">linkedin.com/in/lavan-bharatha-879871235</a>
+              <a href="https://linkedin.com/in/lavan-bharatha-879871235" target="_blank">
+                linkedin.com/in/lavan-bharatha-879871235
+              </a>
             </div>
           </div>
 
@@ -36,18 +36,18 @@
             <i class="bi bi-github"></i>
             <div class="contact-details">
               <h4>GitHub</h4>
-              <a href="https://github.com/lavanbharatha" target="_blank">https://github.com/lavanbharatha</a>
+              <a href="https://github.com/lavanbharatha" target="_blank">
+                github.com/lavanbharatha
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Contact Form -->
-      <div class="col-lg-4 offset-lg-1">
+      <div class="col-lg-6 col-md-10 offset-md-1">
         <div class="contact-form">
-          <div class="text-center">
-            <h3 class="mb-4">Send Message</h3>
-          </div>
+          <h3 class="text-center mb-4">Send Message</h3>
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
             <div class="row gy-3">
               <div class="col-md-6">
@@ -63,13 +63,14 @@
                   [ngClass]="{'is-invalid': contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched}" />
               </div>
               <div class="col-12">
-                <textarea formControlName="message" placeholder="Your Message" rows="2" class="form-control"
+                <textarea formControlName="message" placeholder="Your Message" rows="3" class="form-control"
                   [ngClass]="{'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"></textarea>
               </div>
-              <div class="col-3 mx-auto">
-                <button type="submit" class="btn btn-primary">Send</button>
+              <div class="text-center">
+                <div class="col-3 text-center">
+                  <button type="submit" class="btn btn-primary mt-2">Send</button>
+                </div>
               </div>
-
             </div>
           </form>
         </div>

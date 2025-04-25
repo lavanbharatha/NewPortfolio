@@ -21,22 +21,22 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'CarFlex',
-      description: 'A comprehensive system for managing car inventory, sales, and maintenance records. Features include real-time tracking, detailed reporting, and user management.',
-      techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'REST API'],
+      description: 'CarFlex is a user-friendly web platform where people can explore, buy, sell, and rent cars.  Sellers can post car listings with full details and images, while renters can check availability and send rental requests.',
+      techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
       image: 'carFlex.jpg',
       githubLink: 'https://github.com/lavanbharatha/CarFlex-Website'
      
     },
     {
       title: 'Fintess-Tracker',
-      description: 'Developed at Liberty Mutual, this system handles policy creation, claims processing, and customer management with a focus on user experience and performance.',
-      techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Microservices'],
+      description: 'Fitness Tracker is a web application that allows users to log workouts, monitor calories, and track progress over time. It features personalized workout and diet plans, real-time heart rate and activity sync via wearables, and interactive progress charts.',
+      techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
       image: 'fitness.jpg',
       githubLink: 'https://github.com/lavanbharatha/Fitness-Tracker'
     },
     {
       title: 'Employee Management System',
-      description: 'Built for Finish Line Inc., this platform manages product inventory, user orders, and payment processing with integration to multiple payment gateways.',
+      description: 'This is an Employee Management System designed to simplify handling employee records. It allows adding, viewing, updating, and deleting employee details with ease. The system also includes admin login and search functionality for efficient management.',
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
       image: 'Employe2.jpg',
       githubLink:'https://github.com/lavanbharatha/EmployeeManagement'

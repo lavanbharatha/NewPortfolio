@@ -10,17 +10,17 @@
   position: relative;
   margin-bottom: 3rem;
   text-align: center;
-}
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background: var(--color-primary);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--color-primary);
+  }
 }
 
 .skill-category {
@@ -30,6 +30,7 @@
   height: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
+  overflow: hidden;
 }
 
 .skill-category:hover {
@@ -47,22 +48,34 @@
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
 .skill-item {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: transparent; /* removed background */
+  background-color: transparent;
 }
 
 .skill-name {
   color: var(--color-white);
   font-size: 17px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  i {
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+  }
 }
 
 .skill-percentage {
@@ -70,17 +83,45 @@
   font-size: 0.9rem;
 }
 
-/* Optional: add hover effect to each skill if you want */
+/* Hover effect */
 .skill-item:hover .skill-name {
   color: var(--color-primary);
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .skills-section {
     padding: 4rem 0;
   }
 
   .skills-list {
-    grid-template-columns: 1fr; /* stack on mobile */
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-section {
+    padding: 3rem 0;
+  }
+
+  .skill-category {
+    padding: 1.5rem;
+  }
+
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-name {
+    font-size: 15px;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  .skill-percentage {
+    font-size: 0.8rem;
   }
 }
