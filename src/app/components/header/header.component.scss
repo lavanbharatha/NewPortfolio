@@ -4,80 +4,88 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #0f1116;
+  background: var(--color-bg-variant); /* #0f1116 replaced */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-
-  .navbar {
-    padding: 1rem 0;
-
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-size: 1.8rem;
-      font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;
-      font-style: italic;
-    
-      color: var(--text-color);
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: var(--primary-color);
-      }
-    }
-
-    .navbar-toggler {
-      border: none;
-      padding: 0.5rem;
-      color: var(--text-color);
-      
-      &:focus {
-        box-shadow: none;
-      }
-    }
-
-    .nav-link {
-      color: white;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      transition: color 0.3s ease;
-      font-size: 1.2rem;
-      font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;
-      font-style: italic;
-
-      &:hover, &.active {
-        color: var(--primary-color);
-      }
-    }
-
-    .theme-toggle {
-      background: none;
-      border: none;
-      color: var(--text-color);
-      font-size: 1.2rem;
-      padding: 0.5rem;
-      cursor: pointer;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: var(--primary-color);
-      }
-
-      i {
-        line-height: 1;
-      }
-    }
-  }
+  transition: var(--transition);
+  width: 100%;
 }
 
+/* Navbar */
+.navbar {
+  padding: 1rem 0;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;
+  font-style: italic;
+  color: var(--color-white); /* mapped from --text-color */
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--color-primary); /* mapped from --primary-color */
+}
+
+/* Toggler Button */
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  color: var(--color-white);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Nav Links */
+.nav-link {
+  color: var(--color-white);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary);
+}
+
+.theme-toggle i {
+  line-height: 1;
+}
+
+/* Navbar Collapse for Mobile */
 @media (max-width: 991px) {
   .navbar-collapse {
-    background: var(--bg-color);
+    background: var(--color-bg-variant); /* was --bg-color */
     padding: 1rem;
     border-radius: 0.5rem;
     margin-top: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-} 
+}
+
+/* Extra Highlighted Active Nav Link */
 .nav-link.active {
   color: violet;
   font-weight: 600;

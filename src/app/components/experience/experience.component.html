@@ -1,7 +1,7 @@
 <section class="experience-section">
   <div class="container">
     <h2 class="section-title text-center mb-5">Work Experience</h2>
-    
+
     <div class="timeline">
       <div class="timeline-item" *ngFor="let exp of experiences">
         <div class="timeline-content">
@@ -9,18 +9,18 @@
             <h3 class="company-name">{{ exp.company }}</h3>
             <span class="period">{{ exp.period }}</span>
           </div>
-          
+
           <div class="role-location">
             <h4 class="role">{{ exp.role }}</h4>
             <span class="location">
               <i class="bi bi-geo-alt-fill"></i> {{ exp.location }}
             </span>
           </div>
-          
+
           <ul class="responsibilities">
             <li *ngFor="let item of exp.description">{{ item }}</li>
           </ul>
-          
+
           <div class="technologies">
             <span class="tech-badge" *ngFor="let tech of exp.technologies">
               {{ tech }}
@@ -30,4 +30,4 @@
       </div>
     </div>
   </div>
-</section> 
+</section>

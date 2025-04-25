@@ -1,95 +1,142 @@
-/* Bootstrap Icons */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Custom Variables */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
 :root {
-  /* Light Theme */
-  --primary-color: #2563eb;
-  --primary-color-light: #60a5fa;
-  --bg-color: #ffffff;
-  --bg-secondary: #f8fafc;
-  --text-color: #1e293b;
-  --text-secondary: #64748b;
-  --border-color: #e2e8f0;
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+
+    --transition: all 400ms ease;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
 }
 
-/* Dark Theme */
-.dark-theme {
-  --primary-color: #60a5fa;
-  --primary-color-light: #2563eb;
-  --bg-color: #0f172a;
-  --bg-secondary: #1e293b;
-  --text-color: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --border-color: #334155;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Global Styles */
-body {
-  background-color: #0f1116;
-  color: white;
-  font-size: 1.2rem;
-  font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;
-  font-style: italic;
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 50px;
-  padding: 0;
-}
-
-/* Custom Bootstrap Theme */
-$primary: var(--primary-color);
-$body-bg: var(--bg-color);
-$body-color: var(--text-color);
-
-/* Import Bootstrap */
-@import "bootstrap/scss/bootstrap";
-
-/* Custom Utilities */
-.main-content {
-  min-height: 100vh;
-margin-top: 50px;
-}
-
-.section {
-  padding: 5rem 0;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease forwards;
-}
-
-/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+    display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-white);
+    line-height: 1.7;
+   }
+
+/* ====================== GENERAL CONTAINER ====================== */
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 4px;
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color-light);
-} 
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #0f1116;
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 0;
+    width: 100vw;
+    background-color: var(--color-bg);
+    
+    margin: 0 auto;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+    color: var(--color-light);
+}
+
+section > h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+a {
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-content {
+    margin-top: 5rem; /* Adjust based on your navbar height */
+}
+
+/* ====================== MEDIA QUERIES (MEDIUM DEVICES) ====================== */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+/* ====================== MEDIA QUERIES (SMALL DEVICES) ====================== */
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    section > h2 {
+        margin-bottom: 2rem;
+  }
 }

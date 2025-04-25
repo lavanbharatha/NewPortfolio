@@ -1,35 +1,23 @@
 <header class="header">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" routerLink="/">Lavan Bharatha</a>
+      <a class="navbar-brand" href="#home">Lavan Bharatha</a>
       <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
         <ul class="navbar-nav ms-auto">
-          
-          <li class="nav-item">
-            <a class="nav-link ms-2" routerLink="/about" routerLinkActive="active">About</a>
+          <li class="nav-item" *ngFor="let item of navItems">
+            <a class="nav-link ms-2" 
+               [href]="'#' + item.id"
+               (click)="scrollToSection(item.id, $event)"
+               [class.active]="activeSection === item.id">
+               {{item.label}}
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link ms-2" routerLink="/projects" routerLinkActive="active">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ms-2" routerLink="/experience" routerLinkActive="active">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ms-2" routerLink="/skills" routerLinkActive="active">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ms-2" routerLink="/contact" routerLinkActive="active">Contact</a>
-          </li>
-          <li class="nav-item">
-            <button class="theme-toggle" (click)="toggleTheme()">
-              <i class="bi" [class.bi-moon-fill]="!isDarkTheme" [class.bi-sun-fill]="isDarkTheme"></i>
-            </button>
-          </li>
+         
         </ul>
       </div>
     </div>
   </nav>
-</header> 
+</header>

@@ -15,18 +15,18 @@ interface TechStack {
   imports: [CommonModule, RouterModule]
 })
 export class HomeComponent {
-  constructor(private router: Router) { }
-navigateToProjects() {
-this.router.navigate(['/projects']);
-}
-  techStack: TechStack[] = [
-    { name: 'Java', icon: 'bi bi-filetype-java' },
-    { name: 'Spring Boot', icon: 'bi bi-gear-fill' },
-    { name: 'Angular', icon: 'bi bi-code-slash' },
-    { name: 'MySQL', icon: 'bi bi-database-fill' },
-    { name: 'Git', icon: 'bi bi-git' },
-    { name: 'HTML5', icon: 'bi bi-filetype-html' },
-    { name: 'CSS3', icon: 'bi bi-filetype-css' },
-    { name: 'Bootstrap', icon: 'bi bi-bootstrap' }
+
+  keySkills = [
+    'Full Stack Development',
+    'RESTful API Design',
+    'Frontend Development',
+    'Problem Solving',
+    'Team Collaboration'
   ];
+
+  summary = `Hi, I'm Lavan Bharatha — a passionate Full Stack Developer with hands-on experience in building scalable web applications using Java, Spring Boot, Angular 18, and MySQL.
+I thrive in fast-paced environments and enjoy translating complex business needs into intuitive digital solutions.
+My strengths lie in clean code practices, efficient RESTful API design, and building responsive, modern UIs using Bootstrap 5 and Angular.
+With strong problem-solving skills, I love tackling backend logic as much as crafting smooth frontend experiences.
+`;
 } 

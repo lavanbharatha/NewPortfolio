@@ -1,74 +1,77 @@
 <section class="contact-section">
-  <h2 class="section-title">Contact Me</h2>
-  <div class="contact-row row">
-    <!-- Contact Form -->
-    <div class="contact-left col-4 ms-auto">
-      <div class="contact-form-wrapper">
-        <form>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="your.email@example.com" />
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Contact Me</h2>
+
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-lg-3 mb-4 mb-lg-0 offset-lg-2">
+        <div class="contact-info">
+
+          <div class="contact-item mb-4">
+            <i class="bi bi-envelope-fill"></i>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:lavanbharatha10&#64;gmail.com">lavanbharatha10&#64;gmail.com</a>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Subject" />
+          <div class="contact-item mb-4">
+            <i class="bi bi-whatsapp"></i>
+            <div class="contact-details">
+              <h4>WhatsApp</h4>
+              <a href="9652131270" target="_blank">+91-9652131270</a>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+          <div class="contact-item mb-4">
+            <i class="bi bi-linkedin"></i>
+            <div class="contact-details">
+              <h4>LinkedIn</h4>
+              <a href="https://linkedin.com/in/lavan-bharatha-879871235"
+                target="_blank">linkedin.com/in/lavan-bharatha-879871235</a>
+            </div>
           </div>
 
-          <div class="text-center">
-            <button type="submit" class="send-button" style="width: 150px;">Send Message</button>
+          <div class="contact-item mb-4">
+            <i class="bi bi-github"></i>
+            <div class="contact-details">
+              <h4>GitHub</h4>
+              <a href="https://github.com/lavanbharatha" target="_blank">https://github.com/lavanbharatha</a>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
 
-    <!-- Contact Info -->
-    <div class="contact-right col-3 me-auto">
-      <div class="contact-info">
-        <h3>Contact Information</h3>
+      <!-- Contact Form -->
+      <div class="col-lg-4 offset-lg-1">
+        <div class="contact-form">
+          <div class="text-center">
+            <h3 class="mb-4">Send Message</h3>
+          </div>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <input type="text" formControlName="name" placeholder="Your Name" class="form-control"
+                  [ngClass]="{'is-invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}" />
+              </div>
+              <div class="col-md-6">
+                <input type="email" formControlName="email" placeholder="Your Email" class="form-control"
+                  [ngClass]="{'is-invalid': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}" />
+              </div>
+              <div class="col-12">
+                <input type="text" formControlName="subject" placeholder="Subject" class="form-control"
+                  [ngClass]="{'is-invalid': contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched}" />
+              </div>
+              <div class="col-12">
+                <textarea formControlName="message" placeholder="Your Message" rows="2" class="form-control"
+                  [ngClass]="{'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"></textarea>
+              </div>
+              <div class="col-3 mx-auto">
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
 
-        <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <div class="info-content">
-            <h4>Email</h4>
-            <p>lavanbharatha10&#64;gmail.com</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="info-content">
-            <h4>Location</h4>
-            <p>Suryapet, Telangana</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <i class="fab fa-linkedin"></i>
-          <div class="info-content">
-            <h4>LinkedIn</h4>
-            <a href="linkedin.com/in/lavan-bharatha-879871235" target="_blank">linkedin.com/in/lavan-bharatha</a>
-          </div>
-        </div>
-
-        <div class="info-item mt-1">
-          <i class="fab fa-github"></i>
-          <div class="info-content">
-            <h4>GitHub</h4>
-            <a href="https://github.com/lavanbharatha" target="_blank">https://github.com/lavanbharatha</a>
-          </div>
-        </div>
-        <div class="info-item mt-1">
-          <i class="fab fa-linkedin"></i>
-          <div class="info-content">
-            <h4>Mobile Number</h4>
-            <a href="linkedin.com/in/lavan-bharatha-879871235" target="_blank">9652131270</a>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -1,39 +1,32 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule]
+  imports: [CommonModule, ReactiveFormsModule],
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   contactForm: FormGroup;
-  isSubmitted = false;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
+      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       subject: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(10)]]
+      message: ['', Validators.required],
     });
   }
 
-  onSubmit() {
-    this.isSubmitted = true;
-
+  onSubmit(): void {
     if (this.contactForm.valid) {
-      // Here you would typically send the form data to a backend service
-      console.log('Form submitted:', this.contactForm.value);
+      console.log('Form Submitted:', this.contactForm.value);
       this.contactForm.reset();
-      this.isSubmitted = false;
+    } else {
+      this.contactForm.markAllAsTouched();
     }
   }
-
-  get f() {
-    return this.contactForm.controls;
-  }
-} 
+}

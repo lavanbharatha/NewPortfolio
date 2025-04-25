@@ -1,35 +1,26 @@
 <section class="skills-section">
   <div class="container">
     <h2 class="section-title text-center mb-5">Technical Skills</h2>
-    
+
     <div class="row g-4">
-      <div class="col-md-6" *ngFor="let category of skillCategories">
+      <div class="col-md-4" *ngFor="let category of skillCategories">
         <div class="skill-category">
-          <h3 class="category-title">{{ category.name }}</h3>
-          
-          <div class="skills-list">
+          <h3 class="category-title text-center">{{ category.name }}</h3>
+
+          <div class="skills-list text-center">
             <div class="skill-item" *ngFor="let skill of category.skills">
-              <div class="skill-info">
-                <div class="skill-name">
-                  <i [class]="skill.icon"></i>
-                  <span>{{ skill.name }}</span>
-                </div>
-                <span class="skill-percentage">{{ skill.level }}%</span>
+              <div class="skill-name">
+               <div>
+                <i [class]="skill.icon" style="width: 25px;height: 25px;"></i>
+               </div>
+                {{ skill.name }}
               </div>
-              
-              <div class="progress">
-                <div class="progress-bar" 
-                     role="progressbar" 
-                     [style.width.%]="skill.level"
-                     [attr.aria-valuenow]="skill.level" 
-                     aria-valuemin="0" 
-                     aria-valuemax="100">
-                </div>
-              </div>
+              <span class="skill-percentage">{{ skill.level }}</span>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </div>
-</section> 
+</section>
