@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
 interface TechStack {
@@ -29,4 +29,10 @@ I thrive in fast-paced environments and enjoy translating complex business needs
 My strengths lie in clean code practices, efficient RESTful API design, and building responsive, modern UIs using Bootstrap 5 and Angular.
 With strong problem-solving skills, I love tackling backend logic as much as crafting smooth frontend experiences.
 `;
-} 
+
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  scrollToSection(sectionId: string): void {
+    this.viewportScroller.scrollToAnchor(sectionId);
+  }
+}

@@ -1,18 +1,16 @@
 <section class="about-section">
-  <div class="row no-gutters full-width">
-    <div class="hero-intro mb-5 col-md-8">
-      <div class="text-center">
-        <h1>Hello, I'm</h1>
-        <h2 class="hero-title">
-          <span class="highlight">Lavan Bharatha</span>
-          <div class="subtitle">FullStack Developer</div>
-        </h2>
-      </div>
+  <div class="row no-gutters">
+    <div class="hero-intro col-md-8 text-center">
+      <h1>Hello, I'm</h1>
+      <h2 class="hero-title">
+        <span class="highlight">Lavan Bharatha</span>
+        <div class="subtitle">FullStack Developer</div>
+      </h2>
       <p class="hero-text">{{ summary }}</p>
-      <div class="hero-buttons mt-5 text-center">
-        <a routerLink="/projects" class="btn btn-primary me-3">View Projects</a>
-        <a routerLink="/contact" class="btn btn-outline-primary me-3">Contact Me</a>
-        <a href="CV.pdf" download class="btn btn-outline-primary">
+      <div class="hero-buttons mt-4">
+        <a (click)="scrollToSection('projects')" class="btn btn-primary me-3">View Projects</a>
+        <a (click)="scrollToSection('contact')" class="btn btn-outline-primary me-3">Contact Me</a>
+        <a href="assets/cv/Lavan_Bharatha_CV.pdf" download class="btn btn-outline-primary">
           <i class="bi bi-download me-2"></i>Download My CV
         </a>
       </div>

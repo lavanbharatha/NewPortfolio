@@ -5,20 +5,9 @@
 }
 
 .section {
-  min-height: 100vh;
+  
   padding: 4rem 0;
   background-color: var(--color-bg);
-  transform: translateY(80px) scaleX(0); /* Start position + zero width scale */
-  opacity: 0;
-  transition:
-    transform 0.8s ease-out,
-    opacity 0.8s ease-out;
-  transform-origin: left center; /* Scale from left */
-
-  &.visible {
-    transform: translateY(0) scaleX(1); /* Final position & full width */
-    opacity: 1;
-  }
 
   @media screen and (max-width: 1024px) {
     padding: 4rem 0;

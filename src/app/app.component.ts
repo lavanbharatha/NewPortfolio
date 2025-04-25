@@ -15,7 +15,7 @@ import { ScrollAppearDirective } from './shared/directives/scroll-appear.directi
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, ScrollAppearDirective, HomeComponent, ExperienceComponent, SkillsComponent, ProjectsComponent, ContactComponent]
+  imports: [CommonModule, HeaderComponent, FooterComponent,  HomeComponent, ExperienceComponent, SkillsComponent, ProjectsComponent, ContactComponent]
 })
 export class AppComponent {
   title = 'portfolio';
