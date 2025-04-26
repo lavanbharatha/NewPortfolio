@@ -38,14 +38,14 @@ export class ProjectsComponent {
       title: 'Employee Management System',
       description: 'This is an Employee Management System designed to simplify handling employee records. It allows adding, viewing, updating, and deleting employee details with ease. The system also includes admin login and search functionality for efficient management.',
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
-      image: 'Employe2.jpg',
+      image: 'public/Employe2.jpg',
       githubLink:'https://github.com/lavanbharatha/EmployeeManagement'
     },
     {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing my projects, skills, and experience. Built with Angular and Bootstrap for a responsive design.',
       techStack: ['Angular', 'Bootstrap', 'HTML', 'CSS'],
-      image: 'public/MyPortfolio',
+      image: 'public/MyPortfolio.png',
       githubLink:'https://github.com/lavanbharatha/NewPortfolio'
     }
   ];
