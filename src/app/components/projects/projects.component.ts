@@ -35,7 +35,7 @@ export class ProjectsComponent {
       githubLink: 'https://github.com/lavanbharatha/Fitness-Tracker'
     },
     {
-      title: 'Employee System',
+      title: 'Employee Management System',
       description: 'This is an Employee Management System designed to simplify handling employee records. It allows adding, viewing, updating, and deleting employee details with ease. The system also includes admin login and search functionality for efficient management.',
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
       image: 'public/Employe2.jpg',
