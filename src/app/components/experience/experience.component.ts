@@ -29,7 +29,6 @@ export class ExperienceComponent {
         'Assisted in developing web applications using Java and Angular frameworks',
         'Created responsive UI components.',
         'Participated in regular code reviews and implemented feedback to improve code quality',
-        'Contributed to writing unit tests using Jasmine and JUnit',
         'Integrated RESTful APIs for CRUD operations with Spring Boot backend',
         'Worked with MySQL database for designing and optimizing queries',
         'Collaborated with senior developers to fix UI/UX bugs during sprints',
