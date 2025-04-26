@@ -105,6 +105,27 @@ img {
   object-fit: cover;
 }
 
+/* Animation Classes */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Disable animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .section {
+    transition: none;
+    opacity: 1;
+    transform: none;
+}
+
 /* ====================== MEDIA QUERIES ====================== */
 @media screen and (max-width: 1024px) {
   .container {
@@ -124,4 +145,5 @@ img {
   section > h2 {
     margin-bottom: 2rem;
   }
+}
 }

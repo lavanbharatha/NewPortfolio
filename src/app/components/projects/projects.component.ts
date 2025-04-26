@@ -23,7 +23,7 @@ export class ProjectsComponent {
       title: 'CarFlex',
       description: 'CarFlex is a user-friendly web platform where people can explore, buy, sell, and rent cars.  Sellers can post car listings with full details and images, while renters can check availability and send rental requests.',
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
-      image: 'carFlex.jpg',
+      image: 'public/carFlex.jpg',
       githubLink: 'https://github.com/lavanbharatha/CarFlex-Website'
      
     },
@@ -31,14 +31,14 @@ export class ProjectsComponent {
       title: 'Fintess-Tracker',
       description: 'Fitness Tracker is a web application that allows users to log workouts, monitor calories, and track progress over time. It features personalized workout and diet plans, real-time heart rate and activity sync via wearables, and interactive progress charts.',
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
-      image: 'fitness.jpg',
+      image: 'public/fitness.jpg',
       githubLink: 'https://github.com/lavanbharatha/Fitness-Tracker'
     },
     {
       title: 'Employee Management System',
       description: 'This is an Employee Management System designed to simplify handling employee records. It allows adding, viewing, updating, and deleting employee details with ease. The system also includes admin login and search functionality for efficient management.',
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
-      image: 'Employe2.jpg',
+      image: 'public/Employe2.jpg',
       githubLink:'https://github.com/lavanbharatha/EmployeeManagement'
     },
     {
