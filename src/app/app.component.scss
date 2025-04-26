@@ -1,11 +1,13 @@
 .main-content {
-  margin-top: 4rem;
-  overflow-x: hidden;
+  padding-top: 3rem;
+  
   background-color: var(--color-bg);
+  position: relative;
+  min-height: 100vh;
 }
 
+/* Section basic styling */
 .section {
-  
   padding: 4rem 0;
   background-color: var(--color-bg);
 
@@ -17,3 +19,4 @@
     padding: 3rem 0;
   }
 }
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -26,12 +26,38 @@ import { FadeInDirective } from './shared/directives/fade-in.directive';
     FadeInDirective
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
+
   constructor(private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
+    // Smooth scrolling for anchor links
     document.documentElement.style.scrollBehavior = 'smooth';
+  }
+
+  ngAfterViewInit() {
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const section = entry.target as HTMLElement;
+        
+        // Add animation only when the section enters the viewport
+        if (entry.isIntersecting) {
+          // Trigger animation only if not previously visited
+          if (!section.classList.contains('animated')) {
+            section.classList.add('in-view');
+            section.classList.add('animated');
+          }
+        }
+      });
+    }, {
+      threshold: 0.4,  // When 40% of the section is visible
+      rootMargin: '0px 0px 100px 0px'  // Allow a slight margin before entering view
+    });
+
+    sections.forEach(section => observer.observe(section));
   }
 
   onSectionChange(sectionId: string): void {

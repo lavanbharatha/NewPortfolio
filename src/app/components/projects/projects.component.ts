@@ -49,4 +49,4 @@ export class ProjectsComponent {
       githubLink:'https://github.com/lavanbharatha/NewPortfolio'
     }
   ];
-} 
+}
