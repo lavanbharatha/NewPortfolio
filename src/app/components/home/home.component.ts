@@ -23,7 +23,7 @@ export class HomeComponent {
     'Problem Solving',
     'Team Collaboration'
   ];
-
+  
   summary = `Hi, I'm Lavan Bharatha — a passionate Full Stack Developer with hands-on experience in building scalable web applications using Java, Spring Boot, Angular 18, and MySQL.
 I thrive in fast-paced environments and enjoy translating complex business needs into intuitive digital solutions.
 My strengths lie in clean code practices, efficient RESTful API design, and building responsive, modern UIs using Bootstrap 5 and Angular.
