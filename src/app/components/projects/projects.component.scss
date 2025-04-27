@@ -47,13 +47,13 @@
 
       &:nth-child(odd) {
         left: 0;
-        padding-right: 3rem;
-        text-align: left;
+        padding-right: 2rem;
+        text-align: right;
       }
 
       &:nth-child(even) {
         left: 50%;
-        padding-left: 3rem;
+        padding-left: 2rem;
         text-align: left;
       }
 
@@ -75,6 +75,7 @@
         background-color: var(--color-bgn);
         border-radius: 1rem;
         padding: 2rem;
+        margin: 0 1rem; /* Added margin for nice center */
         box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
         transition: 0.3s ease;
         border: 1px solid transparent;
@@ -163,7 +164,35 @@
 @media screen and (max-width: 1024px) {
   .projects-section {
     .timeline {
-      max-width: var(--container-width-md);
+      padding: 0 0.5rem;
+
+      &::before {
+        left: 1rem;
+      }
+
+      .timeline-item {
+        width: 100% !important;
+        margin: 0 auto 2rem auto;
+        padding-left: 2.5rem;
+        text-align: left;
+        left: 0;
+
+        &:nth-child(odd),
+        &:nth-child(even) {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+          left: 0%;
+          width:500px !important;
+          min-width: 500px !important;
+          max-width: 500px !important;
+          text-align: left;
+          
+        }
+
+        &::before {
+          left: 1rem;
+        }
+      }
     }
   }
 }
@@ -178,11 +207,11 @@
       }
 
       .timeline-item {
-        width: 500px !important;
-        min-width: 500px !important;
-        max-width: 500px !important;
+        width: 100% !important;
         margin: 0 auto 2rem auto;
         padding-left: 2.5rem;
+        text-align: left;
+        left: 0;
 
         &:nth-child(odd),
         &:nth-child(even) {
@@ -194,7 +223,7 @@
         }
       }
     }
-}
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -207,11 +236,11 @@
       }
 
       .timeline-item {
-        width: 500px !important;
-        min-width: 500px !important;
-        max-width: 500px !important;
+        width: 100% !important;
         margin: 0 auto 2rem auto;
         padding-left: 2.5rem;
+        text-align: left;
+        left: 0;
 
         &:nth-child(odd),
         &:nth-child(even) {
