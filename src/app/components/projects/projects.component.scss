@@ -1,10 +1,7 @@
 .projects-section {
-  padding: 4rem 1rem;
+  padding: 4rem 0;
   background: var(--color-bg);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   .section-title {
     color: var(--color-white);
@@ -27,12 +24,9 @@
 
   .timeline {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    padding: 0 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: var(--container-width-lg);
+    margin: 0 auto;
+    padding: 0 1rem;
 
     &::before {
       content: '';
@@ -48,10 +42,22 @@
 
     .timeline-item {
       position: relative;
-      width: 100%;
-      max-width: 600px;
-      padding: 2rem 2rem;
-      text-align: left;
+      
+      width: 50%;
+
+      &:nth-child(odd) {
+        left: 0;
+        padding-right: 2rem;
+      
+        text-align: right;
+      }
+
+      &:nth-child(even) {
+        left: 50%;
+        padding-left: 2rem;
+        text-align: left;
+ 
+      }
 
       &::before {
         content: '';
@@ -69,15 +75,17 @@
       .timeline-content {
         position: relative;
         background-color: var(--color-bgn);
-        border-radius: 1rem;
+        border-radius: 20px;
         padding: 2rem;
-        margin: 0 0rem;
-        box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+        margin: 0 3rem;
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
         transition: 0.3s ease;
         border: 1px solid transparent;
+        text-align: left;
 
         &:hover {
-          transform: translateY(-15px);
+          transform: translateY(-1rem);
+          border-radius: 20px;
           border-color: var(--color-primary-variant);
           box-shadow: 0 0 25px rgba(0, 170, 255, 0.5);
         }
@@ -89,7 +97,7 @@
         .project-image {
           position: relative;
           overflow: hidden;
-          border-radius: 1rem;
+          border-radius: 20px;
           margin-bottom: 1.5rem;
 
           img {
@@ -155,40 +163,84 @@
   }
 }
 
-// ===============================
-// Responsive
-// ===============================
-@media screen and (max-width: 768px) {
+/* Small Screens: Phones */
+@media screen and (max-width: 668px) {
   .projects-section {
-    padding: 0;
+    padding: 2rem 1rem;
 
     .timeline {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+
       &::before {
         display: none;
       }
 
       .timeline-item {
         width: 100%;
-        max-width: 100%;
-        padding: 0 0 2rem 0;
-        text-align: left;
+        left: 0;
+        padding: 2rem 0;
+       
+
+        &:nth-child(odd),
+        &:nth-child(even) {
+          left: 0;
+          padding-left: 0;
+          padding-right: 0;
+          text-align: left;
+        }
 
         &::before {
           display: none;
         }
 
         .timeline-content {
-          margin: 0;
+          margin: 0 auto;
+          max-width: 100%;
+          width: 100%;
           padding: 1.5rem;
+          box-sizing: border-box;
         }
       }
     }
   }
 }
 
-// ===============================
-// Scroll Animation
-// ===============================
+/* Tablets: Medium Screens */
+@media screen and (min-width: 669px) and (max-width: 1024px) {
+  .projects-section {
+    .timeline {
+      padding: 0;
+
+      &::before {
+        left: 1rem;
+      }
+
+      .timeline-item {
+        width: 100%;
+        margin-bottom: 2rem;
+        padding-left: 2.5rem;
+        left: 0;
+
+        &:nth-child(odd),
+        &:nth-child(even) {
+          width: 100%;
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+          text-align: left;
+          left: 0;
+        }
+
+        &::before {
+          left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* Animation for timeline content */
 .timeline-content {
   animation: appear 20s;
   animation-timeline: view();
@@ -205,7 +257,4 @@
     opacity: 1;
     scale: 1;
   }
-}
-.container{
-  margin: 0 0 0 0 ;
 }
