@@ -38,6 +38,8 @@ body {
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ====================== GENERAL CONTAINER ====================== */
