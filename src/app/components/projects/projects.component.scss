@@ -1,7 +1,10 @@
 .projects-section {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   background: var(--color-bg);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .section-title {
     color: var(--color-white);
@@ -24,9 +27,12 @@
 
   .timeline {
     position: relative;
-    max-width: var(--container-width-lg);
-    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &::before {
       content: '';
@@ -42,20 +48,10 @@
 
     .timeline-item {
       position: relative;
-      padding: 2rem 0;
-      width: 50%;
-
-      &:nth-child(odd) {
-        left: 0;
-        padding-right: 2rem;
-        text-align: right;
-      }
-
-      &:nth-child(even) {
-        left: 50%;
-        padding-left: 2rem;
-        text-align: left;
-      }
+      width: 100%;
+      max-width: 600px;
+      padding: 2rem 2rem;
+      text-align: left;
 
       &::before {
         content: '';
@@ -75,11 +71,10 @@
         background-color: var(--color-bgn);
         border-radius: 1rem;
         padding: 2rem;
-        margin: 0 1rem; /* Added margin for nice center */
+        margin: 0 1rem;
         box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
         transition: 0.3s ease;
         border: 1px solid transparent;
-        text-align: left;
 
         &:hover {
           transform: translateY(-15px);
@@ -160,101 +155,40 @@
   }
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 1024px) {
-  .projects-section {
-    .timeline {
-      padding: 0 0.5rem;
-
-      &::before {
-        left: 1rem;
-      }
-
-      .timeline-item {
-        width: 100% !important;
-        margin: 0 auto 2rem auto;
-        padding-left: 2.5rem;
-        text-align: left;
-        left: 0;
-
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-left: 2.5rem;
-          padding-right: 2.5rem;
-          left: 0%;
-          width:500px !important;
-          min-width: 500px !important;
-          max-width: 500px !important;
-          text-align: left;
-          
-        }
-
-        &::before {
-          left: 1rem;
-        }
-      }
-    }
-  }
-}
-
+// ===============================
+// Responsive
+// ===============================
 @media screen and (max-width: 768px) {
   .projects-section {
-    .timeline {
-      padding: 0 0.5rem;
+    padding: 2rem 1rem;
 
+    .timeline {
       &::before {
-        left: 1rem;
+        display: none;
       }
 
       .timeline-item {
-        width: 100% !important;
-        margin: 0 auto 2rem auto;
-        padding-left: 2.5rem;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0 2rem 0;
         text-align: left;
-        left: 0;
-
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-left: 2.5rem;
-        }
 
         &::before {
-          left: 1rem;
+          display: none;
+        }
+
+        .timeline-content {
+          margin: 0;
+          padding: 1.5rem;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 600px) {
-  .projects-section {
-    .timeline {
-      padding: 0 0.5rem;
-
-      &::before {
-        left: 1rem;
-      }
-
-      .timeline-item {
-        width: 100% !important;
-        margin: 0 auto 2rem auto;
-        padding-left: 2.5rem;
-        text-align: left;
-        left: 0;
-
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-left: 2.5rem;
-        }
-
-        &::before {
-          left: 1rem;
-        }
-      }
-    }
-  }
-}
-
+// ===============================
+// Scroll Animation
+// ===============================
 .timeline-content {
   animation: appear 20s;
   animation-timeline: view();
