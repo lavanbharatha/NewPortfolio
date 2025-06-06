@@ -23,7 +23,6 @@ import { ContactComponent } from './components/contact/contact.component';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent
-
   ]
 })
 export class AppComponent implements OnInit {
@@ -32,11 +31,6 @@ export class AppComponent implements OnInit {
   constructor(private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
-
     document.documentElement.style.scrollBehavior = 'smooth';
-  }
-
-  onSectionChange(sectionId: string): void {
-    this.viewportScroller.scrollToAnchor(sectionId);
   }
 }

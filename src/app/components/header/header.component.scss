@@ -20,12 +20,13 @@
   font-size: 1.8rem;
   font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;
   font-style: italic;
-  color: var(--color-white); /* mapped from --text-color */
+  color: var(--color-white); 
   transition: color 0.3s ease;
+  letter-spacing: 0.1rem;
 }
 
 .navbar-brand:hover {
-  color: var(--color-primary); /* mapped from --primary-color */
+  color: var(--color-primary); 
 }
 
 /* Toggler Button */
@@ -43,11 +44,15 @@
 .nav-link {
   color: var(--color-white);
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem ;
+ letter-spacing: 0.1rem;
   font-size: 1.2rem;
   font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;
   font-style: italic;
   transition: color 0.3s ease;
+}
+.nav-item a{
+  margin-left: 4rem;
 }
 
 .nav-link:hover,

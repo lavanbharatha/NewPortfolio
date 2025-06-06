@@ -1,11 +1,8 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
-
-interface TechStack {
-  name: string;
-  icon: string;
-}
+import { RouterModule } from '@angular/router';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-home',
@@ -14,25 +11,88 @@ interface TechStack {
   standalone: true,
   imports: [CommonModule, RouterModule]
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit, OnInit {
 
   keySkills = [
     'Full Stack Development',
     'RESTful API Design',
     'Frontend Development',
     'Problem Solving',
-    'Team Collaboration'
+    'Team Collaboration',
   ];
-  
-  summary = `Hi, I'm Lavan Bharatha — a passionate Full Stack Developer with hands-on experience in building scalable web applications using Java, Spring Boot, Angular 18, and MySQL.
-I thrive in fast-paced environments and enjoy translating complex business needs into intuitive digital solutions.
-My strengths lie in clean code practices, efficient RESTful API design, and building responsive, modern UIs using Bootstrap 5 and Angular.
-With strong problem-solving skills, I love tackling backend logic as much as crafting smooth frontend experiences.
-`;
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  summary: string = `A passionate FullStack Developer with hands-on experience in building scalable web applications using Java, SpringBoot, Angular18, and MySQL. I thrive in fast-paced environments and enjoy translating complex business needs into intuitive digital solutions. My strengths lie in clean code practices, efficient RESTful API design, and building responsive, modern UIs.`;
+
+  summaryWords: string[] = [];
+
+  constructor(private viewportScroller: ViewportScroller) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  ngOnInit(): void {
+    this.summaryWords = this.summary.split(' ');
+  }
 
   scrollToSection(sectionId: string): void {
     this.viewportScroller.scrollToAnchor(sectionId);
+  }
+
+  ngAfterViewInit() {
+    const t1 = gsap.timeline();
+
+    // Hero title animation
+    t1.from('.hero-intro h1', {
+      opacity: 0,
+      y: -1000,
+      delay: 1,
+      duration: 0.5,
+    }, 'tl')
+      .from('.highlight', {
+        opacity: 0,
+        delay: 2,
+        duration: 0.5
+      }, 'tl')
+      .from('.subtitle', {
+        opacity: 0,
+        y: 1000,
+        delay: 1,
+        duration: 0.5,
+      }, 'tl');
+
+    // Summary animation - Staggered word-by-word from left
+    t1.from('.summary-word', {
+      opacity: 0,
+      x: -30,
+      // duration: 0,
+      stagger: 0.03,
+      delay: 0.1,
+      ease: 'power2.out'
+    });
+
+
+    t1.from('.hero-buttons', {
+      opacity: 0,
+      x: -50,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: 'power2.out',
+      // scrollTrigger: {
+      //   trigger: '.hero-buttons',
+      //   start: 'top 70%',
+      // }
+    });
+
+
+    t1.from('.skills-grid .skill-item,.subsection-title', {
+      opacity: 0,
+      duration: 5,
+      delay: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.skills-grid',
+        start: 'top 70%',
+
+      }
+    }, 'tl');
   }
 }

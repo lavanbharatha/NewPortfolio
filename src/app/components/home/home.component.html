@@ -6,7 +6,14 @@
         <span class="highlight">Lavan Bharatha</span>
         <div class="subtitle">FullStack Developer</div>
       </h2>
-      <p class="hero-text">{{ summary }}</p>
+
+      <!-- Summary with GSAP word-by-word animation -->
+      <p class="hero-text">
+        <ng-container *ngFor="let word of summaryWords">
+          <span class="summary-word">{{ word }}</span>&nbsp;
+        </ng-container>
+      </p>
+
       <div class="hero-buttons mt-4">
         <a (click)="scrollToSection('projects')" class="btn btn-primary me-3">View Projects</a>
         <a (click)="scrollToSection('contact')" class="btn btn-outline-primary me-3">Contact Me</a>
@@ -15,11 +22,12 @@
         </a>
       </div>
     </div>
+
     <div class="skills-section col-md-3 offset-md-1">
       <h3 class="subsection-title">Key Skills</h3>
       <div class="skills-grid">
         <div class="skill-item" *ngFor="let skill of keySkills">
-          <span>{{ skill }}</span>
+          {{ skill }}
         </div>
       </div>
     </div>

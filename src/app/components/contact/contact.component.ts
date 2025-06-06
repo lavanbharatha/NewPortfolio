@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
   contactForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -19,6 +20,7 @@ export class ContactComponent {
       subject: ['', Validators.required],
       message: ['', Validators.required],
     });
+    gsap.registerPlugin(ScrollTrigger);
   }
 
   onSubmit(): void {
@@ -28,5 +30,33 @@ export class ContactComponent {
     } else {
       this.contactForm.markAllAsTouched();
     }
+  }
+  ngAfterViewInit(): void {
+    var tl = gsap.timeline();
+    tl.from('.contact-form', {
+      opacity: 0,
+      x: 1000,
+      duration: 1,
+      scrollTrigger: {
+        trigger: '.contact-form',
+        start: 'top center',
+        end: 'bottom center',
+
+      }
+    }, "contact");
+    const items = document.querySelectorAll('.contact-item');
+    items.forEach((item, index) => {
+      tl.from(item, {
+        opacity: 0,
+        x: -1000,
+        duration: 0.4,
+        delay: index * 0.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 60%',
+        }
+      }, "contact");
+    });
   }
 }

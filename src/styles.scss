@@ -17,6 +17,8 @@
   --color-primary-variant: rgba(77, 181, 255, 0.4);
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
+  --color-bg-rgb: 31, 31, 56; // Make sure these values match your background color
+  --color-primary-rgb: 77, 181, 255; // Match your primary color
 
   --transition: all 400ms ease;
 
@@ -138,7 +140,7 @@ img {
   }
 
   section {
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
 }
 

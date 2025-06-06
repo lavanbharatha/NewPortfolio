@@ -1,6 +1,7 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +10,11 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements AfterViewInit {
   isMenuOpen = false;
   isDarkTheme = false;
   activeSection = 'home';
-
+  
   navItems = [
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
@@ -22,23 +23,10 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor(private viewportScroller: ViewportScroller) {}
-
-  ngOnInit() {
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    this.isDarkTheme = savedTheme === 'dark';
-    this.applyTheme();
-  }
-
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
-    this.applyTheme();
-  }
 
   scrollToSection(sectionId: string, event: Event): void {
     event.preventDefault();
@@ -62,7 +50,24 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  private applyTheme() {
-    document.body.classList.toggle('dark-theme', this.isDarkTheme);
+  ngAfterViewInit() {
+    var tl=gsap.timeline();
+    tl.from('.navbar-brand',{
+      opacity: 0,
+      y: -100,
+         duration: 0.5,
+    },"nav");
+    tl.from('.nav-item', {
+      opacity: 0,
+      y: -10,
+      stagger: {
+        amount: 0.6,
+        ease: "power2.out"
+      },
+      duration: 0.5,
+      scrub: 2,
+    },"nav");
+    
   }
+  
 }
