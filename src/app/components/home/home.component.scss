@@ -2,10 +2,12 @@
   font-family: 'padkova';
   src: url(../../../../public/Fonts/Podkova-Medium.ttf);
 }
+
 @font-face {
   font-family: 'nurma';
   src: url(../../../../public/Fonts/Nurma-Regular.otf);
 }
+
 .about-section {
   padding-top: 0;
   background: var(--color-bg);
@@ -26,6 +28,7 @@
       font-family: nurma;
       letter-spacing: 0.3rem;
     }
+
     .highlight {
       color: var(--color-primary);
       font-weight: 500;
@@ -102,7 +105,7 @@
   }
 
   .hero-buttons {
-      a {
+    a {
       cursor: pointer;
     }
   }
@@ -118,14 +121,16 @@
   }
 }
 
-a{
-  margin: 1rem 1rem 1rem 1rem ;
+a {
+  margin: 1rem 1rem 1rem 1rem;
 }
-.hero-intro h1{
-font-family: nurma;
-letter-spacing: 0.2rem;
-margin-bottom: 0;
+
+.hero-intro h1 {
+  font-family: nurma;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0;
 }
-.hero-intro{
+
+.hero-intro {
   margin-top: 2rem;
 }

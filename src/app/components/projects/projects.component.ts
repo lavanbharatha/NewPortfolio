@@ -25,7 +25,7 @@ export class ProjectsComponent {
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
       image: 'public/carFlex.jpg',
       githubLink: 'https://github.com/lavanbharatha/CarFlex-Website'
-     
+
     },
     {
       title: 'Fintess-Tracker',
@@ -39,14 +39,14 @@ export class ProjectsComponent {
       description: 'This is an Employee Management System designed to simplify handling employee records. It allows adding, viewing, updating, and deleting employee details with ease. The system also includes admin login and search functionality for efficient management.',
       techStack: ['Java', 'Spring Boot', 'Angular18', 'MySQL', 'Bootstrap'],
       image: 'public/Employe2.jpg',
-      githubLink:'https://github.com/lavanbharatha/EmployeeManagement'
+      githubLink: 'https://github.com/lavanbharatha/EmployeeManagement'
     },
     {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing my projects, skills, and experience. Built with Angular and Bootstrap for a responsive design.',
       techStack: ['Angular', 'Bootstrap', 'HTML', 'CSS'],
       image: 'public/MyPortfolio.png',
-      githubLink:'https://github.com/lavanbharatha/NewPortfolio'
+      githubLink: 'https://github.com/lavanbharatha/NewPortfolio'
     }
   ];
 }

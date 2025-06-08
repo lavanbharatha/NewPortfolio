@@ -14,16 +14,16 @@ export class HeaderComponent implements AfterViewInit {
   isMenuOpen = false;
   isDarkTheme = false;
   activeSection = 'home';
-  
+
   navItems = [
-    
+
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
     { id: 'contact', label: 'Contact' }
   ];
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(private viewportScroller: ViewportScroller) { }
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
@@ -38,7 +38,7 @@ export class HeaderComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     const sections = this.navItems.map(item => item.id);
-    
+
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
@@ -52,12 +52,12 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    var tl=gsap.timeline();
-    tl.from('.navbar-brand',{
+    var tl = gsap.timeline();
+    tl.from('.navbar-brand', {
       opacity: 0,
       y: -100,
-         duration: 0.5,
-    },"nav");
+      duration: 0.5,
+    }, "nav");
     tl.from('.nav-item', {
       opacity: 0,
       y: -10,
@@ -67,8 +67,8 @@ export class HeaderComponent implements AfterViewInit {
       },
       duration: 0.5,
       scrub: 2,
-    },"nav");
-    
+    }, "nav");
+
   }
-  
+
 }

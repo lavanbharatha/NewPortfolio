@@ -40,7 +40,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
   ngAfterViewInit() {
     const t1 = gsap.timeline();
 
-    // Hero title animation
+
     t1.from('.hero-intro h1', {
       opacity: 0,
       y: -1000,
@@ -59,7 +59,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
         duration: 0.5,
       }, 'tl');
 
-    // Summary animation - Staggered word-by-word from left
+    
     t1.from('.summary-word', {
       opacity: 0,
       x: -30,

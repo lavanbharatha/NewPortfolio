@@ -28,8 +28,8 @@
     max-width: var(--container-width-lg);
     margin: 0 auto;
     padding: 0 1rem;
-   
-  
+
+
 
     &::before {
       content: '';
@@ -45,13 +45,13 @@
 
     .timeline-item {
       position: relative;
-      
+
       width: 50%;
 
       &:nth-child(odd) {
         left: 0;
         padding-right: 2rem;
-      
+
         text-align: right;
       }
 
@@ -59,7 +59,7 @@
         left: 50%;
         padding-left: 2rem;
         text-align: left;
- 
+
       }
 
       &::before {
@@ -184,7 +184,7 @@
         width: 100%;
         left: 0;
         padding: 2rem 0;
-       
+
 
         &:nth-child(odd),
         &:nth-child(even) {

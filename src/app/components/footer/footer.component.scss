@@ -1,14 +1,14 @@
 .footer {
-  background: var(--color-bg-variant); /* Replaced --bg-secondary */
+  background: var(--color-bg-variant);
   padding: 2rem 0;
   margin-top: 4rem;
   width: 100%;
   height:100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Replace with var(--color-light) if preferred */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .copyright {
-  color: var(--color-light); /* Replaced --text-secondary */
+  color: var(--color-light);
   margin: 0;
 }
 
@@ -19,17 +19,17 @@
 }
 
 .footer .social-link {
-  color: var(--color-light); /* Replaced --text-secondary */
+  color: var(--color-light);
   font-size: 1.25rem;
   transition: var(--transition);
 }
 
 .footer .social-link:hover {
-  color: var(--color-primary); /* Replaced --primary-color */
+  color: var(--color-primary); 
   transform: translateY(-2px);
 }
 
-/* Responsive styles */
+
 @media (max-width: 767px) {
   .footer {
     text-align: center;

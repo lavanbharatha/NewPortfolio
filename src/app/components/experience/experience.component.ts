@@ -55,7 +55,6 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
       }
     ];
 
-    // Split descriptions into words
     this.processedExperiences = this.experiences.map(exp => ({
       ...exp,
       description: exp.description.map(sentence => sentence.split(' ')),
