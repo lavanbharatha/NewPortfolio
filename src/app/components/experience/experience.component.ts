@@ -65,7 +65,7 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
     gsap.from('.experience-word', {
       scrollTrigger: {
         trigger: '.experience-section',
-        start: 'top 70%',
+        start: 'top 50%',
         toggleActions: 'play none none none',
       },
       opacity: 0,
