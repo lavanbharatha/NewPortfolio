@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
@@ -39,17 +39,21 @@ body {
     background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-      overflow-x: hidden;
-      width: 100%;
-   }
+    overflow-x: hidden;
+    width: 100%;
+}
 
-/* ====================== GENERAL CONTAINER ====================== */
+/*GENERAL CONTAINER */
 .container {
     width: var(--container-width-lg);
     margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 500;
 }
 
@@ -59,15 +63,16 @@ h1 {
 
 section {
     margin-top: 8rem;
-    /* height: 100vh; - REMOVED LATER [2] */
+
 }
 
-section > h2, section > h5 {
+section>h2,
+section>h5 {
     text-align: center;
     color: var(--color-light);
 }
 
-section > h2 {
+section>h2 {
     color: var(--color-primary);
     margin-bottom: 3rem;
 }
@@ -113,7 +118,7 @@ img {
     object-fit: cover;
 }
 
-/* ====================== MEDIA QUERIES (MEDIUM DEVICES) ====================== */
+
 @media screen and (max-width: 1024px) {
     .container {
         width: var(--container-width-md);
@@ -124,13 +129,13 @@ img {
     }
 }
 
-/* ====================== MEDIA QUERIES (SMALL DEVICES) ====================== */
+
 @media screen and (max-width: 600px) {
     .container {
         width: var(--container-width-sm);
     }
 
-    section > h2 {
+    section>h2 {
         margin-bottom: 2rem;
     }
 }
