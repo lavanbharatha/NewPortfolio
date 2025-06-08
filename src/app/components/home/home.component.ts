@@ -85,14 +85,14 @@ export class HomeComponent implements AfterViewInit, OnInit {
 
     t1.from('.skills-grid .skill-item,.subsection-title', {
       opacity: 0,
-      duration: 5,
-      delay: 1,
+      duration: 0.5,
+    
       ease: 'power2.out',
       scrollTrigger: {
         trigger: '.skills-grid',
         start: 'top 70%',
 
       }
-    }, 'tl');
+    });
   }
 }
