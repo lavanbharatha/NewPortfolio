@@ -12,7 +12,7 @@
   margin-bottom: 3rem;
   position: relative;
   text-align: center;
-}
+  }
 
 .contact-section .section-title::after {
   content: '';
@@ -156,16 +156,28 @@ textarea.form-control {
 }
 
 /* Responsive Tweaks */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .contact-section {
-    padding: 4rem 0;
+    padding: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+   .contact-info .contact-item {
+    flex-direction: row;
+    align-items: center;
+  }
+  .contact-item{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(450px,450px));
   }
 }
 
 @media screen and (max-width: 768px) {
   .contact-form {
     width: 100% !important;
-    padding: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   .contact-info .contact-item {
@@ -174,12 +186,12 @@ textarea.form-control {
   }
 
   .contact-section .section-title::after {
-    left: 0;
+    // left: 0;
     transform: none;
   }
 
   .contact-section .section-title {
-    text-align: left;
+    text-align: center;
   }
 
   .btn-primary {

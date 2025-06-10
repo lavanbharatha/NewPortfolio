@@ -37,11 +37,11 @@ export class ContactComponent implements AfterViewInit {
       opacity: 0,
       x: 1000,
       duration: 1,
+      
       scrollTrigger: {
         trigger: '.contact-form',
-        start: 'top center',
+        start: 'top 50%',
         end: 'bottom center',
-
       }
     }, "contact");
     const items = document.querySelectorAll('.contact-item');
@@ -54,7 +54,7 @@ export class ContactComponent implements AfterViewInit {
         ease: 'power2.out',
         scrollTrigger: {
           trigger: item,
-          start: 'top 60%',
+          start: 'top 70%',
         }
       }, "contact");
     });

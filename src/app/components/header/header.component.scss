@@ -79,7 +79,7 @@
   line-height: 1;
 }
 
-@media (max-width: 991px) {
+@media screen and (min-width:450px) and (max-width: 1024px) {
   .navbar-collapse {
     background: var(--color-bg-variant);
     padding: 1rem;
@@ -87,6 +87,9 @@
     margin-top: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
+  // .header{
+  //   position: fixed;
+  // }
 }
 
 .nav-link.active {

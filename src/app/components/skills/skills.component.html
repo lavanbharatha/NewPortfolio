@@ -1,19 +1,27 @@
 <section class="skills-section">
   <div class="container">
     <h2 class="section-title text-center mb-5">Technical Skills</h2>
-    <div class="row g-4">
-      <div class="col-md-4" *ngFor="let category of skillCategories">
+    <div class="g-4 newScreen">
+      <div *ngFor="let category of skillCategories">
         <div class="skill-category">
           <h3 class="category-title text-center">{{ category.name }}</h3>
           <div class="skills-list text-center">
             <div class="skill-item" *ngFor="let skill of category.skills">
               <div class="skill-name">
-               <div>
-                <i [class]="skill.icon" style="width: 25px;height: 25px;"></i>
-               </div>
-                {{ skill.name }}
+                <div class="row align-items-center justify-content-around" style="margin-right: 5px;">
+                  <div class="col-4">
+                    <i [class]="skill.icon" style="width: 30px;height: 30px; margin-right: 5px;"></i>
+                  </div>
+                  <div class="col-8">
+                    <div>
+                      {{ skill.name }}
+                    </div>
+                    <div>
+                      <span class="skill-percentage">{{ skill.level }}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <span class="skill-percentage">{{ skill.level }}</span>
             </div>
           </div>
         </div>

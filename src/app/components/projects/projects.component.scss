@@ -172,18 +172,25 @@
     padding: 2rem 1rem;
 
     .timeline {
-      max-width: 100%;
+      // max-width: 100%;
       margin: 0 auto;
       padding: 0;
+      display: grid;
+      grid-template-columns: repeat(1,minmax(350px, 400px));
+      align-items: center;
+      justify-content: center;
 
       &::before {
         display: none;
       }
 
       .timeline-item {
-        width: 100%;
+        width: 350px;
         left: 0;
         padding: 2rem 0;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
 
 
         &:nth-child(odd),
@@ -215,9 +222,14 @@
   .projects-section {
     .timeline {
       padding: 0;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(450px, 500px));
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
 
       &::before {
-        left: 1rem;
+        display: none;
       }
 
       .timeline-item {
@@ -236,7 +248,7 @@
         }
 
         &::before {
-          left: 1rem;
+         display: none;
         }
       }
     }
