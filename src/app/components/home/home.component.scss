@@ -8,22 +8,22 @@
   src: url(../../../../public/Fonts/Nurma-Regular.otf);
 }
 
- .screen-normal{
+.screen-normal {
   display: grid;
   grid-template-columns: 4fr 2fr;
   align-items: center;
   justify-content: center;
   text-align: center;
- }
+}
+
 .about-section {
   padding-top: 0;
   background: var(--color-bg);
   color: var(--color-light);
   margin-left: 0%;
   margin-top: 0;
-  // overflow-x: hidden;
-  
-width: 100%;
+
+  width: 100%;
 
   .hero-title {
     font-size: 3.5rem;
@@ -78,9 +78,11 @@ width: 100%;
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     gap: 1rem;
     margin-top: 0;
+    align-items: center;
+    justify-content: center;
 
     .skill-item {
       background: transparent;
@@ -122,19 +124,21 @@ width: 100%;
 }
 
 @media screen and (max-width: 668px) {
- .screen-normal{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
- }
-  .skills-section{
+  .screen-normal {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skills-section {
     margin-top: 2rem;
     align-items: center;
     justify-content: center;
   }
-  .skill-grid{
+
+  .skill-grid {
     margin-top: 1rem;
   }
 }
@@ -154,19 +158,22 @@ a {
 }
 
 @media screen and (min-width: 669px) and (max-width: 1024px) {
- .screen-normal{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
- }
-  .skills-section{
+  .screen-normal {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skills-section {
     margin-top: 2rem;
     align-items: center;
     justify-content: center;
   }
-  .skill-grid{
+
+  .skill-grid {
     margin-top: 1rem;
   }
+
 }
