@@ -2,7 +2,7 @@
 
   background-color: var(--color-bg);
   width: 100%;
- 
+
 }
 
 .section-title {
@@ -34,7 +34,7 @@
   overflow: hidden;
   height: 400px;
   margin: 1rem 1rem 1rem 1rem;
-  
+
 }
 
 .skill-category:hover {
@@ -66,8 +66,8 @@
   border-radius: 0.5rem;
   background-color: transparent;
   white-space: nowrap;
-  
-    
+
+
 }
 
 .skill-name {
@@ -79,8 +79,8 @@
   gap: 0.5rem;
 
   i {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     font-size: 1.2rem;
   }
 }
@@ -105,7 +105,8 @@
     grid-template-columns: 1fr;
   }
 }
- .newScreen{
+
+.newScreen {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -113,7 +114,8 @@
   text-align: center;
   gap: 0rem;
 
- }
+}
+
 @media (max-width: 500px) {
   .skills-section {
     padding: 3rem 0;
@@ -150,65 +152,72 @@
 @keyframes appear {
   from {
     opacity: 0;
-    scale: 0.5;
+    transform: scale(0);
   }
 
   to {
     opacity: 1;
-    scale: 1;
+    transform: scale(1);
   }
 }
 
 @media screen and (min-width: 668px) and (max-width: 1024px) {
- .newScreen{
-display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  
+  .newScreen {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
   }
- .skill-category{
-  height: auto;
-  align-items: center;
-  justify-content: space-around;
- }
- .skill-item{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  justify-content: space-around;
-  
- }
- .skill-name{
-  display: flex;
-  flex-direction: column;
- }
+
+  .skill-category {
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .skill-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+  .skill-name {
+    display: flex;
+    flex-direction: column;
+  }
 }
-.container{
+
+.container {
   margin: auto;
   align-items: center;
   justify-content: center;
 }
 
 @media screen and (max-width: 668px) {
-.newScreen{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  height: auto;
+  .newScreen {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
   }
-  .skill-category{
-  height: auto;
-  align-items: center;
-  justify-content: space-around;
- }
- .skill-item{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  justify-content: space-around;
-  
- }
- .skill-name{
-  display: flex;
-  flex-direction: column;
- }
-  
+
+  .skill-category {
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .skill-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+  .skill-name {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
