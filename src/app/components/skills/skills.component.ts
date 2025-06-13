@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component } from '@angular/core';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 interface Skill {
   name: string;
@@ -19,7 +21,7 @@ interface SkillCategory {
   standalone: true,
   imports: [CommonModule]
 })
-export class SkillsComponent {
+export class SkillsComponent implements AfterViewInit {
   skillCategories: SkillCategory[] = [
     {
       name: 'Backend Development',
@@ -50,4 +52,35 @@ export class SkillsComponent {
               ]
     }
   ];
-}
+  constructor(private viewportScroller: ViewportScroller) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+ ngAfterViewInit(): void {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.skill-category').forEach((el: any) => {
+  gsap.fromTo(
+    el,
+    {
+      opacity: 0,
+      scale: 0.5,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      ease: 'none', // disables easing for exact scroll match
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 90%',
+        end: 'top 60%',
+        scrub: true, // true = real-time, no easing
+        // markers: true // for debugging
+      }
+    }
+  );
+});
+
+ }
+
+
+  }

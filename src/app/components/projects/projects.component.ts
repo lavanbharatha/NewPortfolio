@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 interface Project {
   title: string;
@@ -49,4 +51,34 @@ export class ProjectsComponent {
       githubLink: 'https://github.com/lavanbharatha/NewPortfolio'
     }
   ];
+  constructor(private viewportScroller: ViewportScroller) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  ngAfterViewInit(): void {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.timeline-item').forEach((el: any) => {
+  gsap.fromTo(
+    el,
+    {
+      opacity: 0,
+      scale: 0.5,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      ease: 'none', // disables easing for exact scroll match
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 90%',
+        end: 'top 60%',
+        scrub: true, // true = real-time, no easing
+        // markers: true // for debugging
+      }
+    }
+  );
+});
+
+ }
 }
