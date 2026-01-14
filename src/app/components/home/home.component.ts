@@ -23,7 +23,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
     'Team Collaboration',
   ];
 
-  summary: string = `A passionate FullStack Developer with hands-on experience in building scalable web applications using Java, SpringBoot, Angular18, and MySQL. I thrive in fast-paced environments and enjoy translating complex business needs into intuitive digital solutions. My strengths lie in clean code practices, efficient RESTful API design, and building responsive, modern UIs.`;
+  summary: string = `A passionate Java Developer with hands-on experience in building scalable web applications using Java, SpringBoot, Angular18, and MySQL. I thrive in fast-paced environments and enjoy translating complex business needs into intuitive digital solutions. My strengths lie in clean code practices, efficient RESTful API design, and building responsive, modern UIs.`;
 
   summaryWords: string[] = [];
 
