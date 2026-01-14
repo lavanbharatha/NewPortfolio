@@ -14,9 +14,11 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 export class HomeComponent implements AfterViewInit, OnInit {
 
   keySkills = [
-    'Full Stack Development',
+    'Java Backend Development',
     'RESTful API Design',
-    'Frontend Development',
+    'Microservices Architecture',
+       'Database Management (MySQL)',
+      'CI/CD Pipelines',
     'Problem Solving',
     'Team Collaboration',
   ];
@@ -59,7 +61,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
         duration: 0.5,
       }, 'tl');
 
-    
+
     t1.from('.summary-word', {
       opacity: 0,
       x: -30,
@@ -86,7 +88,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
     t1.from('.skills-grid .skill-item,.subsection-title', {
       opacity: 0,
       duration: 0.5,
-    
+
       ease: 'power2.out',
       scrollTrigger: {
         trigger: '.skills-grid',
