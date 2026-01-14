@@ -57,7 +57,7 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
         company: 'Poulomi Estates Pvt Ltd',
         role: 'Junior Java Developer',
         period: 'July 2023 – March 2024',
-        location: 'Remote',
+        location: 'Hyderabad, India',
         description: [
           'Assisted in developing and maintaining Spring Boot APIs for property, customer, and payment management with basic validations.',
           'Fixed bugs, implemented simple business logic, and handled edge cases to support smooth real-estate operations.',
