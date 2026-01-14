@@ -9,7 +9,7 @@ interface Experience {
   period: string;
   location: string;
   description: string[];
-  technologies: string[];
+  technologies?: string[];
 }
 
 @Component({
@@ -28,7 +28,7 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
     period: string;
     location: string;
     description: string[][];
-    technologies: string[];
+    technologies?: string[];
   }[] = [];
 
   ngOnInit(): void {
@@ -37,21 +37,34 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
     this.experiences = [
       {
         company: 'Hanuma Infotech',
-        role: 'Junior Developer',
-        period: 'Mar 2023 - Present',
+        role: 'Java Developer',
+        period: 'April 2024 – Present',
         location: 'Remote',
         description: [
-          'Assisted in developing web applications using Java and Angular frameworks',
-          'Created responsive UI components.',
-          'Participated in regular code reviews and implemented feedback to improve code quality',
-          'Integrated RESTful APIs for CRUD operations with SpringBoot backend',
-          'Worked with MySQL database for designing and optimizing queries',
-          'Collaborated with senior developers to fix UI/UX bugs during sprints',
-          'Used Git for version control.',
-          'Collaborated on modular Angular18 components with routing and state management for a scalable frontend architecture.',
-          'Styled reusable components and layouts with SCSS and Bootstrap utility classes to ensure design consistency.',
+          'Developed Spring Boot services to manage warehouse inventory, tracking inbound and outbound stock movements and real-time availability across multiple warehouse locations.',
+          'Implemented business logic for stock allocation, reservations, and validations ensuring accurate inventory levels and preventing overselling across retail operations systems.',
+          'Developed microservices using Spring Boot, implementing layered architecture with JPA, Hibernate, and service-level abstractions for clean, testable code.',
+          'Secured RESTful APIs with Spring Security and JWT, applying role-based access control and token-based authentication for protected routes.',
+          'Designed and implemented global exception handling with @ControllerAdvice, standardized API responses, and logged system events using Logback.',
+          'Integrated MySQL database with optimized queries, indexes, and schema migrations; built reusable repository layers using Spring Data JPA.',
+          'Automated CI/CD pipelines using Jenkins and Maven, streamlining builds and environment-specific deployments.',
+          'Wrote unit tests using JUnit and Mockito for service-layer logic, validating business rules and mocking repository dependencies.',
+          'Deployed applications on Apache Tomcat and configured application profiles, logging levels, and resource limits via externalized properties.',
         ],
-        technologies: ['Java', 'SpringBoot', 'Angular', 'Bootstrap', 'MySQL', 'HTML/CSS'],
+        technologies: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'MySQL', 'Jenkins', 'JUnit', 'Mockito', 'Apache Tomcat']
+      },
+      {
+        company: 'Poulomi Estates Pvt Ltd',
+        role: 'Junior Java Developer',
+        period: 'July 2023 – March 2024',
+        location: 'Remote',
+        description: [
+          'Assisted in developing and maintaining Spring Boot APIs for property, customer, and payment management with basic validations.',
+          'Fixed bugs, implemented simple business logic, and handled edge cases to support smooth real-estate operations.',
+          'Wrote and executed MySQL queries for properties, bookings, and customers, maintaining data accuracy and supporting dashboards.',
+          'Tested APIs using Postman, worked with JWT authentication, and coordinated effectively with frontend developers and team daily.',
+        ],
+        technologies: ['Java', 'Spring Boot', 'MySQL', 'Postman', 'JWT']
       }
     ];
 
