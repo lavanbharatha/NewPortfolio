@@ -41,15 +41,11 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
         period: 'April 2024 – Present',
         location: 'Remote',
         description: [
-          'Developed Spring Boot services to manage warehouse inventory, tracking inbound and outbound stock movements and real-time availability across multiple warehouse locations.',
-          'Implemented business logic for stock allocation, reservations, and validations ensuring accurate inventory levels and preventing overselling across retail operations systems.',
-          'Developed microservices using Spring Boot, implementing layered architecture with JPA, Hibernate, and service-level abstractions for clean, testable code.',
-          'Secured RESTful APIs with Spring Security and JWT, applying role-based access control and token-based authentication for protected routes.',
-          'Designed and implemented global exception handling with @ControllerAdvice, standardized API responses, and logged system events using Logback.',
-          'Integrated MySQL database with optimized queries, indexes, and schema migrations; built reusable repository layers using Spring Data JPA.',
-          'Automated CI/CD pipelines using Jenkins and Maven, streamlining builds and environment-specific deployments.',
-          'Wrote unit tests using JUnit and Mockito for service-layer logic, validating business rules and mocking repository dependencies.',
-          'Deployed applications on Apache Tomcat and configured application profiles, logging levels, and resource limits via externalized properties.',
+          'Developed Spring Boot microservices for warehouse inventory, ensuring real-time stock tracking and accurate allocations.',
+              'Implemented secure REST APIs using Spring Security and JWT with role-based access control.',
+              'Designed global exception handling with @ControllerAdvice and standardized API responses.',
+              'Integrated MySQL with optimized queries and reusable repository layers via Spring Data JPA.',
+              'Automated CI/CD pipelines using Jenkins and Maven, and deployed applications on Apache Tomcat.'
         ],
         technologies: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'MySQL', 'Jenkins', 'JUnit', 'Mockito', 'Apache Tomcat']
       },
